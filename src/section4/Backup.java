@@ -6,7 +6,7 @@ import java.util.Random;
 import javax.swing.JOptionPane;
 import javax.swing.ImageIcon;
 
-public class DragonFight {
+public class Backup {
 	// 1. Create a main method and put all of the code below inside of it
 	static boolean runGame = true;
 	static int playerHealth = 100;
@@ -98,7 +98,7 @@ public class DragonFight {
 
 	static void attacking() {
 		String typeOfAttack = JOptionPane.showInputDialog(
-				"Do You Want To Attack The Dragon with a Yell, Kick, use one time 'Special Power', block the attack,?");
+				"Do You Want To Attack The Dragon with a Yell, Kick, or one time use 'Special Power'?");
 
 		// 9. If they typed in "yell":
 
@@ -137,14 +137,10 @@ public class DragonFight {
 				attacking();
 			}
 		}
-		
-		randomNum = new Random().nextInt(35);
-		
-		if(typeOfAttack.equalsIgnoreCase("Block")) {
-			playerHealth = playerHealth + randomNum;
-		}
 
 		// 11. Find a random number between 0 and 35 and store it in playerDamage
+
+		randomNum = new Random().nextInt(35);
 
 		// 12. Subtract this number from the player's health
 

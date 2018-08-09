@@ -3,32 +3,31 @@ package section4;
 import javax.swing.JOptionPane;
 
 public class QuizGame {
-
+static int score = 0;
 	public static void main(String[] args) {
 
 		// 1. Create a variable to hold the user's score
 
-		int score = 0;
+		
 		String answer = null;
 		String question = null;
-		
+
 		String[] questions = new String[4];
 		questions[0] = "What color is the sky?";
 		questions[1] = "Who is the creator of this game?";
 		questions[2] = "What is my dads name?";
 		questions[3] = "What is my moms name?";
-		
+
 		String[] answers = new String[4];
 		answers[0] = "Blue";
 		answers[1] = "Tannen";
 		answers[2] = "Chris";
 		answers[3] = "Celee";
-				
-		
+
 		for (int round = 0; round < 4; round++) {
-			
+
 			question = JOptionPane.showInputDialog(questions[round]);
-            answer = answers[round];
+			answer = answers[round];
 
 			if (question.equalsIgnoreCase(answer)) {
 				JOptionPane.showMessageDialog(null, "Correct!");
@@ -36,10 +35,10 @@ public class QuizGame {
 			} else {
 				JOptionPane.showMessageDialog(null, "Incorrect!");
 				if (score > 0) {
-					score--;
+
 				}
 			}
-			
+
 			JOptionPane.showMessageDialog(null, "You have " + score + " points.");
 			speak("You have " + score + " Points");
 		}
@@ -53,7 +52,7 @@ public class QuizGame {
 		}
 
 		if (score == 2) {
-			JOptionPane.showMessageDialog(null, "Decent job! you got 50");
+			JOptionPane.showMessageDialog(null, "Decent job! you got 50%");
 		}
 
 		if (score == 1) {
@@ -72,6 +71,12 @@ public class QuizGame {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+
 	}
 
+	static void correct() {
+		
+		
+
+	}
 }
