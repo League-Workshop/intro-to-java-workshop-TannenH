@@ -141,12 +141,10 @@ public class DragonFight {
 		}
 		
 		if(typeOfAttack.equalsIgnoreCase("reload")) {
-			if(reload > 0) {
-				reload++;
-			}
-			else {
-				Sorry 
-			}
+
+reload++;
+				JOptionPane.showMessageDialog(null, "You currently have " + reload + " ammo"); 
+			
 		}
 		
 		randomNum = new Random().nextInt(35);
