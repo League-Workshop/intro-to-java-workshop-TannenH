@@ -23,6 +23,8 @@ public class DragonFight {
 	static int randomNum;
 
 	static int specialPower = 0;
+	
+	static int reload = 0;
 
 	public static void main(String[] args) {
 
@@ -98,7 +100,7 @@ public class DragonFight {
 
 	static void attacking() {
 		String typeOfAttack = JOptionPane.showInputDialog(
-				"Do You Want To Attack The Dragon with a Yell, Kick, use one time 'Special Power', block the attack,?");
+				"Do You Want To Attack The Dragon with a 'Yell',' Kick', use one time 'Special Power', 'Block', or reload?");
 
 		// 9. If they typed in "yell":
 
@@ -117,7 +119,7 @@ public class DragonFight {
 
 		if (typeOfAttack.equalsIgnoreCase("kick")) {
 
-			// -- Find a random number between 0 and 25 and storue it in dragonDamage
+			// -- Find a random number between 0 and 25 and store it in dragonDamage
 			randomNum = new Random().nextInt(26);
 
 			// -- Subtract that number from the dragon's health variable
@@ -135,6 +137,15 @@ public class DragonFight {
 				JOptionPane.showMessageDialog(null, "Sorry you have already used up the special power!");
 				System.out.println(playerHealth);
 				attacking();
+			}
+		}
+		
+		if(typeOfAttack.equalsIgnoreCase("reload")) {
+			if(reload > 0) {
+				reload++;
+			}
+			else {
+				Sorry 
 			}
 		}
 		
